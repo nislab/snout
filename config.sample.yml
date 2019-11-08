@@ -1,0 +1,11 @@
+# Please copy this file into a file called sample.yml in the same directory.
+# Before using, replace all mentions of //USERPREFIX// with the appropriate path.
+
+pybombs:
+    env:
+        PATH: '//USERPREFIX///bin'
+        PYTHONPATH: '//USERPREFIX///python://USERPREFIX///lib/python3.6/site-packages://USERPREFIX///lib64/python3.6/site-packages://USERPREFIX///lib/python3.6/dist-packages://USERPREFIX///lib64/python3.6/dist-packages://USERPREFIX///lib/python3.7/site-packages://USERPREFIX///lib64/python3.7/site-packages://USERPREFIX///lib/python3.7/dist-packages://USERPREFIX///lib64/python3.7/dist-packages://USERPREFIX///lib/python2.6/site-packages://USERPREFIX///lib64/python2.6/site-packages://USERPREFIX///lib/python2.6/dist-packages://USERPREFIX///lib64/python2.6/dist-packages://USERPREFIX///lib/python2.7/site-packages://USERPREFIX///lib64/python2.7/site-packages://USERPREFIX///lib/python2.7/dist-packages://USERPREFIX///lib64/python2.7/dist-packages'
+        LD_LIBRARY_PATH: '//USERPREFIX///lib://USERPREFIX///lib64/'
+        LIBRARY_PATH: '//USERPREFIX///lib://USERPREFIX///lib64/'
+        PKG_CONFIG_PATH: '//USERPREFIX///lib/pkgconfig://USERPREFIX///lib64/pkgconfig'
+        PYBOMBS_PREFIX: '//USERPREFIX///'

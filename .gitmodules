@@ -1,0 +1,6 @@
+[submodule "scapy-radio"]
+	path = scapy-radio
+	url = https://github.com/jkulskis/scapy-radio
+[submodule "vendor/BTLE"]
+	path = vendor/BTLE
+	url = https://github.com/jkulskis/BTLE

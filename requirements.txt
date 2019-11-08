@@ -1,0 +1,13 @@
+appdirs
+pyyaml
+pytest
+pytest-cov
+pytest-html
+click
+pyshark
+pylint
+PyX
+prettytable
+sphinx
+recommonmark
+timeago

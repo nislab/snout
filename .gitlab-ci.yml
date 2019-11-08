@@ -1,0 +1,51 @@
+image: bunislab/sdr-pybombs-env:latest
+
+#before_script:
+#    - pip install -r requirements.txt
+
+stages:
+    - Environment
+    - Static Analysis
+    - Test
+    - Run
+
+flake8:
+    stage: Static Analysis
+    script:
+        - apt-get update && apt-get install -y flake8
+        - make pep8
+    artifacts:
+        reports:
+            junit: tests/pep8.log
+    allow_failure: true
+
+install:
+    stage: Environment
+    script:
+        - make install-vendor install-pydeps
+        - python3 setup.py install
+
+pytest:
+    stage: Test
+    script:
+        - make install-vendor install-pydeps
+        - python3 setup.py install
+        - make test
+    artifacts:
+        reports:
+            junit: tests/report.xml
+
+coverage:
+    stage: Test
+    script:
+        - make install-vendor install-pydeps
+        - python3 setup.py install
+        - make test-coverage
+
+run:
+    stage: Run
+    script:
+        - make install
+        - snout
+        - snout-doctor
+        - snout-doctor checkup
